@@ -16,7 +16,7 @@ export default {
   data(){
     return{
       user: {
-        avatar_link: '../assets/70.jpg',
+        avatar_link: '/src/assets/70.jpg',
         full_name: 'Иванов Иван Иванович',
         nick_name: 'zxcromashka',
         adress: 'Москва, Юбилейная 50',

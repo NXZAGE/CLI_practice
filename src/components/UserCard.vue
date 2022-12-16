@@ -1,6 +1,6 @@
 <template>
 <div class="user-card">
-    <img src={{ user.avatar_link }} class="user-photo">
+    <img v-bind:src="user.avatar_link" class="user-photo">
     <p class="user-nickname">{{ user.nick_name }}</p>
     <p class="user-name">
         {{ user.full_name }}
@@ -15,7 +15,7 @@
         {{ user.email }}
     </p>
     <p class="user-info-item">
-        <img src="assets/phone.png">
+        <img src="../assets/phone.png">
         {{ user.phone_number }}
     </p>
 </div>
