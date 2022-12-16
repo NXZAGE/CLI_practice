@@ -1,23 +1,22 @@
 <template>
 <div class="user-card">
-    <img src="../assets/70.jpg" class="user-photo">
-    <p class="user-nickname">romashka</p>
+    <img src={{ user.avatar_link }} class="user-photo">
+    <p class="user-nickname">{{ user.nick_name }}</p>
     <p class="user-name">
-        Иванов Иван<br>
-        Иванович
+        {{ user.full_name }}
     </p>
     <hr>
     <p class="user-info-item">
         <img src="../assets/location.png">
-        Москва, Юбилейная 50
+        {{ user.adress }}
     </p>
     <p class="user-info-item">
         <img src="../assets/mail.png">
-        coldrabbit48@example.com
+        {{ user.email }}
     </p>
     <p class="user-info-item">
-        <img src="../assets/phone.png">
-        +7-495-266-57-34
+        <img src="assets/phone.png">
+        {{ user.phone_number }}
     </p>
 </div>
 </template>
@@ -25,8 +24,8 @@
 <script>
 export default{
     name: "UserCard",
-    components: {
-    }
+    props: ["user"],
+    components: {},
 }
 </script>
 

@@ -1,5 +1,7 @@
 <template>
-  <UserCard/>
+  <div id="app">
+    <UserCard v-bind:user="user"/>
+  </div>
 </template>
 
 <script>
@@ -10,6 +12,18 @@ export default {
   name: 'App',
   components: {
     UserCard
+  },
+  data(){
+    return{
+      user: {
+        avatar_link: '../assets/70.jpg',
+        full_name: 'Иванов Иван Иванович',
+        nick_name: 'zxcromashka',
+        adress: 'Москва, Юбилейная 50',
+        email: 'hotrabbit@example.com',
+        phone_number: '+7 (999) 999-01-01',
+      }
+    }
   }
 }
 </script>
