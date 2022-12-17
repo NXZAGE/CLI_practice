@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <UserCard v-bind:user="user"/>
+    <button v-on:click="getList()">get</button>
   </div>
 </template>
 
@@ -12,6 +13,14 @@ export default {
   name: 'App',
   components: {
     UserCard
+  }, 
+  methods: {
+    getList(){
+      this.axios.get("https://randomuser.me/api/")
+      .then((responce) =>{
+        console.log(responce.data)
+      })
+    }
   },
   data(){
     return{
@@ -25,6 +34,7 @@ export default {
       }
     }
   }
+ 
 }
 </script>
 
