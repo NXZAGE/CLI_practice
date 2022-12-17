@@ -1,6 +1,6 @@
 <template>
 <div class="user-card">
-    <img v-bind:src="user.avatar_link" class="user-photo">
+    <img :src="user.avatar_link" class="user-photo">
     <p class="user-nickname">{{ user.nick_name }}</p>
     <p class="user-name">
         {{ user.full_name }}
@@ -20,7 +20,7 @@
     </p>
 </div>
 </template>
-
+    
 <script>
 export default{
     name: "UserCard",
